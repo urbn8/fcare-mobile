@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 import {
   View,
   ScrollView,
@@ -7,29 +7,39 @@ import {
   TouchableOpacity,
   Image,
   Keyboard,
-  LayoutAnimation
+  LayoutAnimation,
+  StyleSheet,
 } from 'react-native'
+import I18n from 'react-native-i18n'
 import { connect } from 'react-redux'
-import {Images, Metrics} from '../Themes'
-import LoginActions from '../Redux/LoginRedux'
+import { styles as s } from 'react-native-style-tachyons'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 
-// I18n
-import I18n from 'react-native-i18n'
+import { Colors, Images, Metrics } from '../../Themes'
 
-export class loginScreen extends React.Component {
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 70,
+    backgroundColor: Colors.background
+  },
+  contentContainer: {
+    justifyContent: 'center',
+  }
+})
+
+export class LoginScreen extends React.Component {
 
   render () {
     return (
       <ScrollView
-        contentContainerStyle={{justifyContent: 'center'}}
-        style={[Styles.container, {height: '100%'}]}
+        contentContainerStyle={ styles.contentContainer }
+        style={ [styles.container] }
         keyboardShouldPersistTaps
       >
-        <View style={[styles.subContainer]}>
-          <View style={[ s.flx_i, s.bg_blue ]}>
+        <View style={ [styles.subContainer] }>
+          <View style={[s.flx_i, s.bg_blue]}>
           </View>
-          <View style={[ s.flx_i, s.bg_red ]}>
+          <View style={[s.flx_i, s.bg_red]}>
           </View>
         </View>
       </ScrollView>
