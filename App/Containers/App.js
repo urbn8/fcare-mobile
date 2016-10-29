@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
+import { StyleSheet } from 'react-native'
+import NativeTachyons from 'react-native-style-tachyons'
+
 import '../I18n/I18n' // keep before root container
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 import applyConfigSettings from '../Config'
+
+// setup tachyons styles
+NativeTachyons.build({}, StyleSheet)
 
 // Apply config overrides
 applyConfigSettings()

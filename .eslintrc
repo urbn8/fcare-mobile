@@ -25,6 +25,7 @@
     "react/jsx-curly-spacing": [1, "always"],
     "react/self-closing-comp": [0],
     "react/prefer-stateless-function": [1],
+    "jsx-quotes": [1, "prefer-single"],
     "block-scoped-var": [0],
     "brace-style": [2, "1tbs", {"allowSingleLine": true}],
     "camelcase": [0],
