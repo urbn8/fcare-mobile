@@ -7,9 +7,16 @@ import '../I18n/I18n' // keep before root container
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 import applyConfigSettings from '../Config'
+import colorsPalette from './colorsPalette'
 
 // setup tachyons styles
-NativeTachyons.build({}, StyleSheet)
+NativeTachyons.build({
+  colors: {
+    lighten: 0.2,
+    darken: 0.2,
+    palette: colorsPalette,
+  },
+}, StyleSheet)
 
 // Apply config overrides
 applyConfigSettings()

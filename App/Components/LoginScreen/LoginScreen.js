@@ -37,11 +37,9 @@ import { Actions as NavigationActions } from 'react-native-router-flux'
 class LoginScreenComponent extends React.Component {
 
   render() {
-    console.log('style', colors, s['bg-navy'], s.bg_navy, colors['bg-navy'], colors.bg_navy)
-
     return (
       <View cls='flx-i'>
-        <View cls='flx-i aic jcc'>
+        <View cls='aic jcc' style={[ s.flx_i ]}>
           <Text cls='f1'>
             FCare
           </Text>
@@ -54,6 +52,7 @@ class LoginScreenComponent extends React.Component {
               name: 'facebook', type: 'font-awesome',
             }}
             title='Login with Facebook'
+            onPress={ NavigationActions.presentationScreen }
           />
         </View>
       </View>
